@@ -1,5 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iron Temple Gym - Web System Development</title>
+</head>
+<body>
 
-    <p>Esto es mi primer push</p>
+    <header>
+        <h1>Andrés Jiménez Bonilla and Fernando Martinez - Iron Temple Gym</h1>
+        <nav>
+            <a href="#philosophy">Our Philosophy</a> | 
+            <a href="#routines">Sample Routines</a> | 
+            <a href="#registration">Join the Gym</a>
+        </nav>
+    </header>
+
+    <!-- Main page container -->
+    <main>
+        
+        <!-- Gym introduction section -->
+        <section id="philosophy">
+            <h2>Welcome to the true house of iron</h2>
+            <p>In our gym you won't find useless machines or miracle routines. Only barbells, plates, and <strong>discipline</strong>. Here we come to apply the principle of <em>progressive overload</em>.</p>
+            
+            <figure>
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&auto=format&fit=crop" width="300" alt="Barbells and weight plates on a gym floor">
+                <figcaption>Real equipment for real athletes.</figcaption>
+            </figure>
+            
+            <p>We work on mastering the three pillars:</p>
+            <ul>
+                <li><strong>Bench press:</strong> For a powerful push.</li>
+                <li><strong>Barbell squat:</strong> The foundation of strength.</li>
+                <li><strong>Deadlift:</strong> The ultimate back builder.</li>
+            </ul>
+        </section>
+
+        <hr/>
+
+        <!-- Table section: Workout routine -->
+        <section id="routines">
+            <article>
+                <h2>Sample Routine</h2>
+                <p>Here is one of our favorite splits to gain muscle mass. Download more routines at <a href="https://exrx.net/" target="_blank">our partner portal</a>.</p>
+                
+                <!-- Semantically structured data table -->
+                <table>
+                    <caption>Day 1: Chest and Biceps Hypertrophy</caption>
+                    <thead>
+                        <tr>
+                            <th>Muscle Group</th>
+                            <th>Exercise</th>
+                            <th>Sets</th>
+                            <th>Reps</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <!-- Use of rowspan to merge the 'Chest' category cell across 3 rows -->
+                            <td rowspan="3">Chest</td>
+                            <td>Barbell Bench Press</td>
+                            <td>4</td>
+                            <td>8 - 10</td>
+                        </tr>
+                        <tr>
+                            <td>Incline Dumbbell Press</td>
+                            <td>3</td>
+                            <td>10 - 12</td>
+                        </tr>
+                        <tr>
+                            <td>Cable Flyes</td>
+                            <td>3</td>
+                            <td>12 - 15</td>
+                        </tr>
+                        <tr>
+                            <!-- Use of rowspan to merge the 'Biceps' category cell across 2 rows -->
+                            <td rowspan="2">Biceps</td>
+                            <td>EZ Bar Curl</td>
+                            <td>4</td>
+                            <td>10 - 12</td>
+                        </tr>
+                        <tr>
+                            <td>Hammer Curl</td>
+                            <td>3</td>
+                            <td>12 - 15</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <hr/>
+
+        <!-- Form section: Gym registration -->
+        <section id="registration">
+            <h2>Become a gym member</h2>
+            
+            <!-- Data capture form -->
+            <form action="/process_registration" method="POST">
+                <fieldset>
+                    <legend>Registration Details</legend>
+                    
+                    <!-- Text and email inputs with required validation -->
+                    <div>
+                        <label for="name">Full name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div>
+                        <label for="email">Email address:</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+
+                    <!-- Radio Buttons group to select only one option -->
+                    <fieldset>
+                        <legend>Membership Type</legend>
+                        <input type="radio" id="membership-monthly" name="membership" value="monthly" checked>
+                        <label for="membership-monthly">Monthly (39.99€)</label><br>
+                        
+                        <input type="radio" id="membership-annual" name="membership" value="annual">
+                        <label for="membership-annual">Annual (399.99€)</label>
+                    </fieldset>
+
+                    <!-- Dropdown menu for selection -->
+                    <div>
+                        <label for="goal">Main goal:</label>
+                        <select id="goal" name="goal">
+                            <option value="hypertrophy">Gain muscle mass</option>
+                            <option value="strength">Gain strength (Powerlifting)</option>
+                            <option value="lose_fat">Lose fat</option>
+                        </select>
+                    </div>
+
+                    <!-- Large text area -->
+                    <div>
+                        <label for="injuries">Do you have any previous injuries? (Optional):</label><br>
+                        <textarea id="injuries" name="injuries"></textarea>
+                    </div>
+
+                    <!-- Terms acceptance checkbox -->
+                    <div>
+                        <label for="terms">
+                            <input type="checkbox" id="terms" name="terms" value="accepted" required>
+                            <span>I accept the rules of the iron temple</span>
+                        </label>
+                    </div>
+
+                    <!-- Form submit button -->
+                    <div>
+                        <button type="submit">Register now!</button>
+                    </div>
+
+                </fieldset>
+            </form>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Module 01 Exercise: HTML - Loyola University</p>
+        <p><em>Page developed with HTML5 structure.</em></p>
+    </footer>
+
+</body>
 </html>
