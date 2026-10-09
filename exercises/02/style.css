@@ -13,12 +13,12 @@ body {
 }
 
 header {
-    background-color: #5995DA; 
+    background-color: blue; 
     padding: 20px; 
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    border-bottom: 2px solid #5D6063; 
+    border-bottom: 2px solid grey; 
 }
 
 header h1 {
@@ -37,7 +37,7 @@ header nav a:visited {
 }
 
 header nav a:hover {
-    color: #B2D6FF; 
+    color: cyan; 
     text-decoration: underline; 
 }
 
@@ -121,3 +121,18 @@ footer {
     justify-content: center; 
     padding: 20px;
 }
+a:link {
+    color: darkblue; 
+    text-decoration: none; 
+
+}
+a:visited {
+    color: purple; 
+}
+a:hover {
+    color: cyan; 
+    text-decoration: underline; 
+}
+a:active {
+    color: #5995DA; 
+    text-decoration: underline;
