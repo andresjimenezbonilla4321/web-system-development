@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Budget Tracker</h1>
+      <p><em>Add your expenses and see how much you have spent.</em></p>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>New expense</h2>
+        <form id="expense-form">
+          <div class="field">
+            <label for="expense-name">Name</label>
+            <input
+              id="expense-name"
+              name="expense-name"
+              type="text"
+              placeholder="Groceries"
+            />
+          </div>
+          <div class="field">
+            <label for="expense-amount">Amount</label>
+            <input
+              id="expense-amount"
+              name="expense-amount"
+              type="number"
+              step="0.01"
+              placeholder="25.50"
+            />
+          </div>
+          <button type="submit">Add expense</button>
+        </form>
+        <p id="error" class="error"></p>
+      </section>
+
+      <section class="card">
+        <h2>Expenses</h2>
+        <ul id="expense-list"></ul>
+        <p class="total-line">
+          Total spent: <strong id="total">0.00</strong> €
+        </p>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>Web System Development - Module 03 exercise</p>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
